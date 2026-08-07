@@ -1003,7 +1003,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Isolator:PC817"
+		(symbol "Isolator:PC827"
 			(pin_names
 				(offset 1.016)
 			)
@@ -1019,7 +1019,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "PC817"
+			(property "Value" "PC827"
 				(at 0 5.08 0)
 				(effects
 					(font
@@ -1028,7 +1028,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_DIP:DIP-4_W7.62mm"
+			(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
 				(at -5.08 -5.08 0)
 				(effects
 					(font
@@ -1039,7 +1039,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf"
+			(property "Datasheet" "http://optoelectronics.liteon.com/upload/download/DS-70-96-0016/LTV-8X7%20series.PDF"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1049,7 +1049,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "DC Optocoupler, Vce 35V, CTR 50-300%, DIP-4"
+			(property "Description" "Dual DC Optocoupler, Vce 35V, CTR 50%, DIP-8"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1058,7 +1058,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "NPN DC Optocoupler"
+			(property "ki_keywords" "NPN DC Dual Optocoupler"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1076,7 +1076,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "PC817_0_1"
+			(symbol "PC827_0_1"
 				(rectangle
 					(start -5.08 3.81)
 					(end 5.08 -3.81)
@@ -1090,7 +1090,7 @@
 				)
 				(polyline
 					(pts
-						(xy -5.08 2.54) (xy -2.54 2.54) (xy -2.54 -0.635)
+						(xy -5.08 2.54) (xy -2.54 2.54) (xy -2.54 -1.27) (xy -2.54 0.635)
 					)
 					(stroke
 						(width 0)
@@ -1233,7 +1233,7 @@
 					)
 				)
 			)
-			(symbol "PC817_1_1"
+			(symbol "PC827_1_1"
 				(pin passive line
 					(at -7.62 2.54 0)
 					(length 2.54)
@@ -1280,7 +1280,7 @@
 							)
 						)
 					)
-					(number "4"
+					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1298,7 +1298,609 @@
 							)
 						)
 					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PC827_2_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Isolator:PC847"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -5.08 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "PC847"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_DIP:DIP-16_W7.62mm"
+				(at -5.08 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+					(hide yes)
+				)
+			)
+			(property "Description" "DC Quad Optocoupler, Vce 35V, CTR 50-300%, DIP16"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "NPN DC Quad Optocoupler"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "DIP*W7.62mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "PC847_0_1"
+				(rectangle
+					(start -5.08 3.81)
+					(end 5.08 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 2.54) (xy -2.54 2.54) (xy -2.54 -1.27) (xy -2.54 0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 -0.635) (xy -1.905 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -0.635) (xy -2.54 -2.54) (xy -5.08 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -0.635) (xy -3.175 0.635) (xy -1.905 0.635) (xy -2.54 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 0.508) (xy 0.762 0.508) (xy 0.381 0.381) (xy 0.381 0.635) (xy 0.762 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 -0.508) (xy 0.762 -0.508) (xy 0.381 -0.635) (xy 0.381 -0.381) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.905) (xy 2.54 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0.635) (xy 4.445 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.048 -1.651) (xy 3.556 -1.143) (xy 4.064 -2.159) (xy 3.048 -1.651)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 2.54) (xy 5.08 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -2.54) (xy 2.54 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -2.54) (xy 5.08 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "PC847_1_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PC847_2_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PC847_3_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "PC847_4_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5937,6 +6539,119 @@
 		)
 	)
 	(symbol
+		(lib_id "Isolator:PC847")
+		(at 189.23 72.39 0)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "02c9d6ad-2c4c-401f-8cc0-b203ddf2552c")
+		(property "Reference" "U2"
+			(at 189.23 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PC847"
+			(at 189.23 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm"
+			(at 184.15 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf"
+			(at 189.23 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "DC Quad Optocoupler, Vce 35V, CTR 50-300%, DIP16"
+			(at 189.23 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "11"
+			(uuid "dc612038-af91-4a67-a8d6-c102a58b96cf")
+		)
+		(pin "7"
+			(uuid "4311a901-667f-480f-b486-e10d5f4e12e4")
+		)
+		(pin "10"
+			(uuid "ad3cb14b-061e-4fbb-933d-cbb06eedd999")
+		)
+		(pin "9"
+			(uuid "4b47d574-dcdc-4a7c-b6bc-8d01d7677f16")
+		)
+		(pin "2"
+			(uuid "f8226f61-b4fb-412c-a246-bd1e1c262306")
+		)
+		(pin "15"
+			(uuid "45d409f7-c791-4e2a-ad0e-f94c0c48a5fd")
+		)
+		(pin "14"
+			(uuid "7b77a669-19e7-41d6-afd7-7196899e24b8")
+		)
+		(pin "3"
+			(uuid "3cee66fe-c1ad-44ed-a7b2-175171720506")
+		)
+		(pin "5"
+			(uuid "b2d820e9-3147-4c54-bb98-aaba58516718")
+		)
+		(pin "6"
+			(uuid "19e3838c-aa36-48be-8e8c-337dc7f3e59e")
+		)
+		(pin "16"
+			(uuid "8c8cb883-2fac-4793-994b-7a605a1d06c2")
+		)
+		(pin "8"
+			(uuid "26a377c8-12cc-448d-9a48-41a64901ab65")
+		)
+		(pin "12"
+			(uuid "dc1da957-4b57-4299-8223-5341f7e1746d")
+		)
+		(pin "1"
+			(uuid "90dc2b0e-a152-4f6a-84ce-d09b4642bf74")
+		)
+		(pin "4"
+			(uuid "744101c2-3c26-4e7e-89f0-65b98e4f225e")
+		)
+		(pin "13"
+			(uuid "10d9906c-d56e-4fc8-acd9-02e0346acc8d")
+		)
+		(instances
+			(project ""
+				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
+					(reference "U2")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 204.47 97.79 90)
 		(unit 1)
@@ -6645,7 +7360,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "460"
 			(at 173.99 113.03 90)
 			(effects
 				(font
@@ -6759,83 +7474,6 @@
 			(project "Three_Phase_Inverter"
 				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
 					(reference "R24")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Isolator:PC817")
-		(at 189.23 24.13 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "44e0abe6-5f2e-41ac-8151-d8784d8af3f1")
-		(property "Reference" "U2"
-			(at 189.23 15.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PC817"
-			(at 189.23 17.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DIP:DIP-4_W7.62mm"
-			(at 184.15 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf"
-			(at 189.23 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "DC Optocoupler, Vce 35V, CTR 50-300%, DIP-4"
-			(at 189.23 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "ffa89478-bfbd-43f3-a285-afd47e9f5dbb")
-		)
-		(pin "2"
-			(uuid "b86af1ae-485a-4a2e-a8db-e3742c20842f")
-		)
-		(pin "3"
-			(uuid "a6a0b707-b67f-4b35-ab75-4ac8a67e63c7")
-		)
-		(pin "1"
-			(uuid "e600bd53-c0fb-481d-88b5-777fe5f66a84")
-		)
-		(instances
-			(project ""
-				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
-					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -6977,6 +7615,95 @@
 		)
 	)
 	(symbol
+		(lib_id "Isolator:PC827")
+		(at 190.5 142.24 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "470a3e77-9f11-4733-9959-4011e9b2fb9a")
+		(property "Reference" "U3"
+			(at 190.5 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PC827"
+			(at 190.5 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+			(at 185.42 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://optoelectronics.liteon.com/upload/download/DS-70-96-0016/LTV-8X7%20series.PDF"
+			(at 190.5 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual DC Optocoupler, Vce 35V, CTR 50%, DIP-8"
+			(at 190.5 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "84a7bea4-fd9e-4e2b-8a46-dfdd3968c24a")
+		)
+		(pin "8"
+			(uuid "982bbaa1-0d01-466f-a2fa-313ac6ecd3e5")
+		)
+		(pin "7"
+			(uuid "203a9d0c-4f3f-4bcc-a701-fd465e9cba57")
+		)
+		(pin "1"
+			(uuid "ed029e47-51b9-426b-8d5c-1f45f2d11a65")
+		)
+		(pin "2"
+			(uuid "28994891-0204-441e-95c1-4ea8d7dc02c3")
+		)
+		(pin "3"
+			(uuid "a50cb277-208c-4d7f-8908-7e7e36ea7ab2")
+		)
+		(pin "4"
+			(uuid "0cfc14e2-0f48-4dbb-9dfb-52c79a12d6ec")
+		)
+		(pin "5"
+			(uuid "c52737c5-814f-4f70-a725-5e370dc2f5f2")
+		)
+		(instances
+			(project ""
+				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
+					(reference "U3")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 173.99 92.71 270)
 		(unit 1)
@@ -6994,7 +7721,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "460"
 			(at 173.99 88.9 90)
 			(effects
 				(font
@@ -7132,7 +7859,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "460"
 			(at 173.99 66.04 90)
 			(effects
 				(font
@@ -7597,6 +8324,208 @@
 		)
 	)
 	(symbol
+		(lib_id "Isolator:PC847")
+		(at 189.23 24.13 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "68edc2d7-5c79-45f3-b9de-1a5a26d25232")
+		(property "Reference" "U2"
+			(at 189.23 15.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PC847"
+			(at 189.23 17.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm"
+			(at 184.15 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf"
+			(at 189.23 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "DC Quad Optocoupler, Vce 35V, CTR 50-300%, DIP16"
+			(at 189.23 24.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "11"
+			(uuid "dc612038-af91-4a67-a8d6-c102a58b96cf")
+		)
+		(pin "7"
+			(uuid "4311a901-667f-480f-b486-e10d5f4e12e4")
+		)
+		(pin "10"
+			(uuid "ad3cb14b-061e-4fbb-933d-cbb06eedd999")
+		)
+		(pin "9"
+			(uuid "4b47d574-dcdc-4a7c-b6bc-8d01d7677f16")
+		)
+		(pin "2"
+			(uuid "f8226f61-b4fb-412c-a246-bd1e1c262306")
+		)
+		(pin "15"
+			(uuid "45d409f7-c791-4e2a-ad0e-f94c0c48a5fd")
+		)
+		(pin "14"
+			(uuid "7b77a669-19e7-41d6-afd7-7196899e24b8")
+		)
+		(pin "3"
+			(uuid "3cee66fe-c1ad-44ed-a7b2-175171720506")
+		)
+		(pin "5"
+			(uuid "b2d820e9-3147-4c54-bb98-aaba58516718")
+		)
+		(pin "6"
+			(uuid "19e3838c-aa36-48be-8e8c-337dc7f3e59e")
+		)
+		(pin "16"
+			(uuid "8c8cb883-2fac-4793-994b-7a605a1d06c2")
+		)
+		(pin "8"
+			(uuid "26a377c8-12cc-448d-9a48-41a64901ab65")
+		)
+		(pin "12"
+			(uuid "dc1da957-4b57-4299-8223-5341f7e1746d")
+		)
+		(pin "1"
+			(uuid "90dc2b0e-a152-4f6a-84ce-d09b4642bf74")
+		)
+		(pin "4"
+			(uuid "744101c2-3c26-4e7e-89f0-65b98e4f225e")
+		)
+		(pin "13"
+			(uuid "10d9906c-d56e-4fc8-acd9-02e0346acc8d")
+		)
+		(instances
+			(project ""
+				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:PC827")
+		(at 189.23 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6f036b47-8e2e-46f6-ba0f-fecc03ff12f5")
+		(property "Reference" "U3"
+			(at 189.23 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PC827"
+			(at 189.23 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+			(at 184.15 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://optoelectronics.liteon.com/upload/download/DS-70-96-0016/LTV-8X7%20series.PDF"
+			(at 189.23 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual DC Optocoupler, Vce 35V, CTR 50%, DIP-8"
+			(at 189.23 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "84a7bea4-fd9e-4e2b-8a46-dfdd3968c24a")
+		)
+		(pin "8"
+			(uuid "982bbaa1-0d01-466f-a2fa-313ac6ecd3e5")
+		)
+		(pin "7"
+			(uuid "203a9d0c-4f3f-4bcc-a701-fd465e9cba57")
+		)
+		(pin "1"
+			(uuid "ed029e47-51b9-426b-8d5c-1f45f2d11a65")
+		)
+		(pin "2"
+			(uuid "28994891-0204-441e-95c1-4ea8d7dc02c3")
+		)
+		(pin "3"
+			(uuid "a50cb277-208c-4d7f-8908-7e7e36ea7ab2")
+		)
+		(pin "4"
+			(uuid "0cfc14e2-0f48-4dbb-9dfb-52c79a12d6ec")
+		)
+		(pin "5"
+			(uuid "c52737c5-814f-4f70-a725-5e370dc2f5f2")
+		)
+		(instances
+			(project ""
+				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 213.36 31.75 180)
 		(unit 1)
@@ -7737,83 +8666,6 @@
 			(project "Three_Phase_Inverter"
 				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
 					(reference "Q3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Isolator:PC817")
-		(at 189.23 72.39 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "78654bd3-cdb3-4ad8-b0c4-fe1056d0784a")
-		(property "Reference" "U4"
-			(at 189.23 63.5 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PC817"
-			(at 189.23 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DIP:DIP-4_W7.62mm"
-			(at 184.15 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf"
-			(at 189.23 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "DC Optocoupler, Vce 35V, CTR 50-300%, DIP-4"
-			(at 189.23 72.39 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "98a20a3d-4201-45ad-8009-6c6ce5305f39")
-		)
-		(pin "2"
-			(uuid "7a737390-9b91-4f6c-92cf-4974be7681b9")
-		)
-		(pin "3"
-			(uuid "0c403e8e-1491-4c8b-9318-b0cef73f5af6")
-		)
-		(pin "1"
-			(uuid "a8013945-5154-443b-a64a-db1fa3aba432")
-		)
-		(instances
-			(project "Three_Phase_Inverter"
-				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
-					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -8045,7 +8897,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "460"
 			(at 173.99 17.78 90)
 			(effects
 				(font
@@ -8437,83 +9289,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Isolator:PC817")
-		(at 190.5 142.24 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8844081d-91c2-4a12-959d-44bff00558c2")
-		(property "Reference" "U7"
-			(at 190.5 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PC817"
-			(at 190.5 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DIP:DIP-4_W7.62mm"
-			(at 185.42 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf"
-			(at 190.5 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "DC Optocoupler, Vce 35V, CTR 50-300%, DIP-4"
-			(at 190.5 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "5dd232db-a689-49e1-8613-e8677bba8283")
-		)
-		(pin "2"
-			(uuid "515167b2-dd49-471c-92dc-1989e99d7d6f")
-		)
-		(pin "3"
-			(uuid "f6e4b9ce-7b8d-4c93-b0a6-c7edb1af8e6e")
-		)
-		(pin "1"
-			(uuid "bed66ccf-aac1-4484-820e-ffe1db6a11d5")
-		)
-		(instances
-			(project "Three_Phase_Inverter"
-				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
-					(reference "U7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+BATT")
 		(at 250.19 128.27 270)
 		(unit 1)
@@ -8724,83 +9499,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Isolator:PC817")
-		(at 189.23 119.38 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9a2f79f9-68d9-4565-9e47-04c0d39d5fd3")
-		(property "Reference" "U6"
-			(at 189.23 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PC817"
-			(at 189.23 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DIP:DIP-4_W7.62mm"
-			(at 184.15 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf"
-			(at 189.23 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "DC Optocoupler, Vce 35V, CTR 50-300%, DIP-4"
-			(at 189.23 119.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "4707679e-ff5f-4896-b988-136dcf5859dc")
-		)
-		(pin "2"
-			(uuid "29a26180-1584-47f8-8d1d-73653e5f292a")
-		)
-		(pin "3"
-			(uuid "0a40bc84-9155-40c7-a661-9ad284f2c70f")
-		)
-		(pin "1"
-			(uuid "d18aa587-4c17-47da-a71f-80f87d80997e")
-		)
-		(instances
-			(project "Three_Phase_Inverter"
-				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
-					(reference "U6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Transistor_FET:IRLZ44N")
 		(at 233.68 27.94 0)
 		(unit 1)
@@ -8943,6 +9641,119 @@
 		)
 	)
 	(symbol
+		(lib_id "Isolator:PC847")
+		(at 189.23 95.25 0)
+		(unit 4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a6005373-7123-4e74-bbd0-15691648f403")
+		(property "Reference" "U2"
+			(at 189.23 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PC847"
+			(at 189.23 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm"
+			(at 184.15 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf"
+			(at 189.23 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "DC Quad Optocoupler, Vce 35V, CTR 50-300%, DIP16"
+			(at 189.23 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "11"
+			(uuid "dc612038-af91-4a67-a8d6-c102a58b96cf")
+		)
+		(pin "7"
+			(uuid "4311a901-667f-480f-b486-e10d5f4e12e4")
+		)
+		(pin "10"
+			(uuid "ad3cb14b-061e-4fbb-933d-cbb06eedd999")
+		)
+		(pin "9"
+			(uuid "4b47d574-dcdc-4a7c-b6bc-8d01d7677f16")
+		)
+		(pin "2"
+			(uuid "f8226f61-b4fb-412c-a246-bd1e1c262306")
+		)
+		(pin "15"
+			(uuid "45d409f7-c791-4e2a-ad0e-f94c0c48a5fd")
+		)
+		(pin "14"
+			(uuid "7b77a669-19e7-41d6-afd7-7196899e24b8")
+		)
+		(pin "3"
+			(uuid "3cee66fe-c1ad-44ed-a7b2-175171720506")
+		)
+		(pin "5"
+			(uuid "b2d820e9-3147-4c54-bb98-aaba58516718")
+		)
+		(pin "6"
+			(uuid "19e3838c-aa36-48be-8e8c-337dc7f3e59e")
+		)
+		(pin "16"
+			(uuid "8c8cb883-2fac-4793-994b-7a605a1d06c2")
+		)
+		(pin "8"
+			(uuid "26a377c8-12cc-448d-9a48-41a64901ab65")
+		)
+		(pin "12"
+			(uuid "dc1da957-4b57-4299-8223-5341f7e1746d")
+		)
+		(pin "1"
+			(uuid "90dc2b0e-a152-4f6a-84ce-d09b4642bf74")
+		)
+		(pin "4"
+			(uuid "744101c2-3c26-4e7e-89f0-65b98e4f225e")
+		)
+		(pin "13"
+			(uuid "10d9906c-d56e-4fc8-acd9-02e0346acc8d")
+		)
+		(instances
+			(project ""
+				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
+					(reference "U2")
+					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Screw_Terminal_01x04")
 		(at 275.59 88.9 0)
 		(unit 1)
@@ -9013,83 +9824,6 @@
 			(project ""
 				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
 					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Isolator:PC817")
-		(at 189.23 48.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ae480f92-cd5c-4989-97f4-bc60d2128289")
-		(property "Reference" "U3"
-			(at 189.23 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PC817"
-			(at 189.23 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DIP:DIP-4_W7.62mm"
-			(at 184.15 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf"
-			(at 189.23 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "DC Optocoupler, Vce 35V, CTR 50-300%, DIP-4"
-			(at 189.23 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "b080d8b7-9333-4118-8f00-20fad1213afc")
-		)
-		(pin "2"
-			(uuid "292c192a-d327-4506-a58c-cab2d2207623")
-		)
-		(pin "3"
-			(uuid "b232a0fb-c4cd-4a42-9f54-ca0aef1261ee")
-		)
-		(pin "1"
-			(uuid "13502d45-7d00-4e2f-a8d1-9dfa0cb59942")
-		)
-		(instances
-			(project "Three_Phase_Inverter"
-				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
-					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -9323,7 +10057,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "460"
 			(at 173.99 41.91 90)
 			(effects
 				(font
@@ -9439,6 +10173,119 @@
 				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
 					(reference "Reverse1")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:PC847")
+		(at 189.23 48.26 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c5c90ca0-fdd0-49df-912e-6e5073705ab9")
+		(property "Reference" "U2"
+			(at 189.23 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PC847"
+			(at 189.23 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-16_W7.62mm"
+			(at 184.15 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf"
+			(at 189.23 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "DC Quad Optocoupler, Vce 35V, CTR 50-300%, DIP16"
+			(at 189.23 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "11"
+			(uuid "dc612038-af91-4a67-a8d6-c102a58b96cf")
+		)
+		(pin "7"
+			(uuid "4311a901-667f-480f-b486-e10d5f4e12e4")
+		)
+		(pin "10"
+			(uuid "ad3cb14b-061e-4fbb-933d-cbb06eedd999")
+		)
+		(pin "9"
+			(uuid "4b47d574-dcdc-4a7c-b6bc-8d01d7677f16")
+		)
+		(pin "2"
+			(uuid "f8226f61-b4fb-412c-a246-bd1e1c262306")
+		)
+		(pin "15"
+			(uuid "45d409f7-c791-4e2a-ad0e-f94c0c48a5fd")
+		)
+		(pin "14"
+			(uuid "7b77a669-19e7-41d6-afd7-7196899e24b8")
+		)
+		(pin "3"
+			(uuid "3cee66fe-c1ad-44ed-a7b2-175171720506")
+		)
+		(pin "5"
+			(uuid "b2d820e9-3147-4c54-bb98-aaba58516718")
+		)
+		(pin "6"
+			(uuid "19e3838c-aa36-48be-8e8c-337dc7f3e59e")
+		)
+		(pin "16"
+			(uuid "8c8cb883-2fac-4793-994b-7a605a1d06c2")
+		)
+		(pin "8"
+			(uuid "26a377c8-12cc-448d-9a48-41a64901ab65")
+		)
+		(pin "12"
+			(uuid "dc1da957-4b57-4299-8223-5341f7e1746d")
+		)
+		(pin "1"
+			(uuid "90dc2b0e-a152-4f6a-84ce-d09b4642bf74")
+		)
+		(pin "4"
+			(uuid "744101c2-3c26-4e7e-89f0-65b98e4f225e")
+		)
+		(pin "13"
+			(uuid "10d9906c-d56e-4fc8-acd9-02e0346acc8d")
+		)
+		(instances
+			(project ""
+				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
+					(reference "U2")
+					(unit 2)
 				)
 			)
 		)
@@ -9598,7 +10445,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "460"
 			(at 175.26 135.89 90)
 			(effects
 				(font
@@ -10094,83 +10941,6 @@
 			(project ""
 				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
 					(reference "U8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Isolator:PC817")
-		(at 189.23 95.25 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "df867bfd-4469-4a5a-869d-ee810100686b")
-		(property "Reference" "U5"
-			(at 189.23 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PC817"
-			(at 189.23 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DIP:DIP-4_W7.62mm"
-			(at 184.15 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.soselectronic.cz/a_info/resource/d/pc817.pdf"
-			(at 189.23 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "DC Optocoupler, Vce 35V, CTR 50-300%, DIP-4"
-			(at 189.23 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "66503f8c-eb35-4a13-a1a4-19774cdfdf0c")
-		)
-		(pin "2"
-			(uuid "eab0720b-1e23-406d-bbfc-3d64b3b442d2")
-		)
-		(pin "3"
-			(uuid "153610c8-6d38-4f66-a886-3e722674934d")
-		)
-		(pin "1"
-			(uuid "7ae9c0a2-b24d-40ba-9a24-0ad71f41525a")
-		)
-		(instances
-			(project "Three_Phase_Inverter"
-				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
-					(reference "U5")
 					(unit 1)
 				)
 			)
