@@ -3152,18 +3152,6 @@
 		(uuid "2dd39704-989e-4869-8011-a4109dc71e59")
 	)
 	(junction
-		(at 127 73.66)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4d0f95b0-b186-4cb1-8854-91f57c38ea31")
-	)
-	(junction
-		(at 115.57 66.04)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4e2a2d6e-4d9f-4807-a2a1-d575206116ca")
-	)
-	(junction
 		(at 101.6 53.34)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3180,18 +3168,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "549f65ff-7077-42eb-beeb-1bc23205d033")
-	)
-	(junction
-		(at 101.6 73.66)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "56fe3006-c5ad-4de7-8f2f-ec22e004140b")
-	)
-	(junction
-		(at 138.43 66.04)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "573e6af6-4ec8-46ea-89dc-7b3aba986915")
 	)
 	(junction
 		(at 262.89 118.11)
@@ -3234,12 +3210,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8d19ca21-a42b-499e-8f51-9ff816f62366")
-	)
-	(junction
-		(at 115.57 73.66)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a14e30b3-6974-4e75-bded-b78ca942a85f")
 	)
 	(junction
 		(at 212.09 107.95)
@@ -3302,12 +3272,6 @@
 		(uuid "dccd6121-4406-46fa-9c3d-10a53fe4d363")
 	)
 	(junction
-		(at 127 66.04)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e7cb8cd1-6f61-4ac7-8382-bf36c14af9a9")
-	)
-	(junction
 		(at 250.19 128.27)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3354,6 +3318,10 @@
 	(no_connect
 		(at 29.21 143.51)
 		(uuid "3791b8de-f1aa-4711-9b0b-640b82fc068d")
+	)
+	(no_connect
+		(at 59.69 168.91)
+		(uuid "45bb6118-2faf-4312-be17-cca64ce2188d")
 	)
 	(no_connect
 		(at 29.21 140.97)
@@ -3488,16 +3456,6 @@
 			(type default)
 		)
 		(uuid "10c2590a-e700-40cf-ad12-65f6b7b5e063")
-	)
-	(wire
-		(pts
-			(xy 115.57 73.66) (xy 127 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "116de6bd-2822-4f88-a578-51979f4e8bb6")
 	)
 	(polyline
 		(pts
@@ -3671,7 +3629,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 74.93) (xy 121.92 80.01)
+			(xy 121.92 77.47) (xy 121.92 80.01)
 		)
 		(stroke
 			(width 0)
@@ -3771,7 +3729,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 74.93) (xy 133.35 80.01)
+			(xy 133.35 77.47) (xy 133.35 80.01)
 		)
 		(stroke
 			(width 0)
@@ -3931,7 +3889,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 74.93) (xy 109.22 80.01)
+			(xy 109.22 77.47) (xy 109.22 80.01)
 		)
 		(stroke
 			(width 0)
@@ -4551,7 +4509,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 66.04) (xy 133.35 67.31)
+			(xy 133.35 66.04) (xy 133.35 69.85)
 		)
 		(stroke
 			(width 0)
@@ -4871,16 +4829,6 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 73.66) (xy 115.57 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cf1476f2-ffd5-4604-a521-2675904b2773")
-	)
-	(wire
-		(pts
 			(xy 212.09 60.96) (xy 237.49 60.96)
 		)
 		(stroke
@@ -4978,16 +4926,6 @@
 			(type default)
 		)
 		(uuid "db4b1203-c7e4-477e-b824-5d6d6f14b8f6")
-	)
-	(wire
-		(pts
-			(xy 127 73.66) (xy 138.43 73.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dba1698d-f20a-4467-abe8-ecc661c9bf51")
 	)
 	(wire
 		(pts
@@ -5161,7 +5099,7 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 66.04) (xy 121.92 67.31)
+			(xy 121.92 66.04) (xy 121.92 69.85)
 		)
 		(stroke
 			(width 0)
@@ -5211,7 +5149,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.22 66.04) (xy 109.22 67.31)
+			(xy 109.22 66.04) (xy 109.22 69.85)
 		)
 		(stroke
 			(width 0)
@@ -5931,7 +5869,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 133.35 71.12 0)
+		(at 133.35 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5939,7 +5877,7 @@
 		(dnp no)
 		(uuid "016812db-42d6-43c0-b3f6-69d5d3ce8ba0")
 		(property "Reference" "R27"
-			(at 132.842 70.358 0)
+			(at 132.842 72.898 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5948,7 +5886,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 133.096 72.39 0)
+			(at 133.096 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5956,8 +5894,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
-			(at 131.572 71.12 90)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 131.572 73.66 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5966,7 +5904,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 133.35 71.12 0)
+			(at 133.35 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5975,7 +5913,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 133.35 71.12 0)
+			(at 133.35 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5993,76 +5931,6 @@
 			(project "Three_Phase_Inverter"
 				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
 					(reference "R27")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 127 69.85 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "06dfee67-4be1-4872-9ba4-67f1bffa07a0")
-		(property "Reference" "R2"
-			(at 129.54 68.5799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1k"
-			(at 129.54 71.1199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
-			(at 125.222 69.85 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 127 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 127 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "4592ef03-2d8d-4601-a4e3-45cf509eab2c")
-		)
-		(pin "1"
-			(uuid "7608e27e-b679-46ea-9ab2-dde92293d99f")
-		)
-		(instances
-			(project "Three_Phase_Inverter"
-				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
-					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -6094,7 +5962,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 204.47 99.568 90)
 			(effects
 				(font
@@ -6230,7 +6098,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 28.702 58.42 90)
 			(effects
 				(font
@@ -6436,7 +6304,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 213.868 102.87 90)
 			(effects
 				(font
@@ -6506,7 +6374,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 213.868 127 90)
 			(effects
 				(font
@@ -6615,76 +6483,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 115.57 69.85 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2df4a89d-1b7b-4b12-9347-1000c7c87232")
-		(property "Reference" "R1"
-			(at 118.11 68.5799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1k"
-			(at 118.11 71.1199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
-			(at 113.792 69.85 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 115.57 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 115.57 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "1500c5ae-74d8-4964-ab9e-15052264c279")
-		)
-		(pin "1"
-			(uuid "fbe6177e-180b-475e-9ee9-21bba523b919")
-		)
-		(instances
-			(project ""
-				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
-					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Transistor_FET:IRLZ44N")
 		(at 232.41 146.05 0)
 		(unit 1)
@@ -6762,7 +6560,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 109.22 71.12 0)
+		(at 109.22 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6770,7 +6568,7 @@
 		(dnp no)
 		(uuid "409a01f7-aa3e-444a-907c-4fc705703372")
 		(property "Reference" "R26"
-			(at 110.49 70.104 0)
+			(at 110.49 72.644 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6779,7 +6577,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 110.49 72.136 0)
+			(at 110.49 74.676 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6787,8 +6585,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
-			(at 107.442 71.12 90)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 107.442 73.66 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6797,7 +6595,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 109.22 71.12 0)
+			(at 109.22 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6806,7 +6604,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 109.22 71.12 0)
+			(at 109.22 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6855,7 +6653,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 173.99 115.062 90)
 			(effects
 				(font
@@ -6899,7 +6697,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 121.92 71.12 0)
+		(at 121.92 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6907,7 +6705,7 @@
 		(dnp no)
 		(uuid "4431a10c-2efa-4183-a9ef-6a979514b1a5")
 		(property "Reference" "R24"
-			(at 121.158 70.612 0)
+			(at 121.158 73.152 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6916,7 +6714,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 121.412 72.644 0)
+			(at 121.412 75.184 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6924,8 +6722,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
-			(at 120.142 71.12 90)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
+			(at 120.142 73.66 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6934,7 +6732,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 121.92 71.12 0)
+			(at 121.92 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6943,7 +6741,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 121.92 71.12 0)
+			(at 121.92 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7136,7 +6934,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 205.74 28.448 90)
 			(effects
 				(font
@@ -7204,7 +7002,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 173.99 90.932 90)
 			(effects
 				(font
@@ -7274,7 +7072,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 213.868 55.88 90)
 			(effects
 				(font
@@ -7342,7 +7140,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 173.99 68.072 90)
 			(effects
 				(font
@@ -7480,7 +7278,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 204.47 123.698 90)
 			(effects
 				(font
@@ -7550,7 +7348,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 107.442 83.82 90)
 			(effects
 				(font
@@ -7620,7 +7418,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 120.142 83.82 90)
 			(effects
 				(font
@@ -7688,7 +7486,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 204.47 76.708 90)
 			(effects
 				(font
@@ -7756,7 +7554,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 204.47 146.558 90)
 			(effects
 				(font
@@ -7826,7 +7624,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 215.138 31.75 90)
 			(effects
 				(font
@@ -8255,7 +8053,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 173.99 19.812 90)
 			(effects
 				(font
@@ -8459,7 +8257,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 204.47 52.578 90)
 			(effects
 				(font
@@ -8777,76 +8575,6 @@
 			(project "Three_Phase_Inverter"
 				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
 					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 138.43 69.85 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "93fbd822-b807-4545-8e7b-5495fbef638e")
-		(property "Reference" "R3"
-			(at 140.97 68.5799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1k"
-			(at 140.97 71.1199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
-			(at 136.652 69.85 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 138.43 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 138.43 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "c36c4220-3e71-4a5c-ab9c-ac416901f686")
-		)
-		(pin "1"
-			(uuid "acaaa689-2173-4dc5-8d10-54c3e9fedbb4")
-		)
-		(instances
-			(project "Three_Phase_Inverter"
-				(path "/a75076a0-d0a2-44cb-9fc0-34b66bf4691a"
-					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -9395,7 +9123,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 131.572 83.82 90)
 			(effects
 				(font
@@ -9603,7 +9331,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 173.99 43.942 90)
 			(effects
 				(font
@@ -9878,7 +9606,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 175.26 137.922 90)
 			(effects
 				(font
@@ -9994,7 +9722,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "ceee3968-1e7c-441f-a368-a657fceedf3c")
 		(property "Reference" "C1"
 			(at 96.52 62.2299 0)
@@ -10006,7 +9733,7 @@
 			)
 		)
 		(property "Value" "100u"
-			(at 96.52 64.7699 0)
+			(at 94.742 65.786 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10084,7 +9811,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 28.702 68.58 90)
 			(effects
 				(font
@@ -10620,7 +10347,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 213.868 149.86 90)
 			(effects
 				(font
@@ -10759,7 +10486,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal"
 			(at 213.868 80.01 90)
 			(effects
 				(font
