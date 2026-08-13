@@ -1,0 +1,18 @@
+Reference,Qty,Value,DNP,Exclude from BOM,Exclude from Board,Footprint,Datasheet
+"C1,C3",2,100u,,,,Capacitor_THT:C_Radial_D5.0mm_H7.0mm_P2.00mm,~
+"C2,C4",2,100n,,,,Capacitor_THT:C_Radial_D5.0mm_H7.0mm_P2.00mm,~
+"Forward1,Reverse1,Stop1",3,~,,,,Button_Switch_THT:SW_PUSH_6mm_H7.3mm,~
+J3,1,3 phase output,,,,TerminalBlock:TerminalBlock_Xinya_XY308-2.54-4P_1x04_P2.54mm_Horizontal,~
+J5,1,POWER,,,,TerminalBlock:TerminalBlock_MaiXu_MX126-5.0-02P_1x02_P5.00mm,~
+J6,1,OLED Display pins,,,,Connector_PinHeader_1.27mm:PinHeader_1x04_P1.27mm_Vertical,~
+"Q1,Q2,Q3,Q4,Q5,Q6",6,IRLZ44N,,,,Package_TO_SOT_THT:TO-220-3_Vertical,http://www.irf.com/product-info/datasheets/data/irlz44n.pdf
+R4,1,91k,,,,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+"R5,R24,R26,R27",4,10k,,,,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+"R6,R7,R8,R9,R10,R11",6,460,,,,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+"R12,R14,R16,R18,R20,R22",6,300,,,,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+"R13,R15,R17,R19,R21,R23",6,1000,,,,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+"R25,R28,R29",3,20k,,,,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,~
+U1,1,L7805,,,,Package_TO_SOT_THT:TO-220-3_Vertical,http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf
+U2,1,PC847,,,,Package_DIP:DIP-16_W7.62mm,http://www.soselectronic.cz/a_info/resource/d/pc817.pdf
+U3,1,PC827,,,,Package_DIP:DIP-8_W7.62mm,http://optoelectronics.liteon.com/upload/download/DS-70-96-0016/LTV-8X7%20series.PDF
+U8,1,ESP32-WROOM-32,,,,RF_Module:ESP32-C3-DevKitM-1,https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf
