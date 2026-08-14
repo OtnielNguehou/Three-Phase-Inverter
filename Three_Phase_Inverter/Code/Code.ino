@@ -11,7 +11,7 @@
 #define REVERSE_BUTTON 26
 #define FORWARD_BUTTON 27
 
-
+Adafruit_SSD1306 display(SCREEN_WIDTH,SCREEN_HEIGHT, OLED_RESET);
 // //The MCPWM peripheral is a versatile PWM generator, 
 // which contains various submodules to make it a key element
 // in power electronic applications like motor control, digital power, and so on.
@@ -54,8 +54,6 @@ mcpwm_comparator_config_t comparator_config= {
 //  by other submodules like MCPWM Timer and MCPWM Comparator.
 mcpwm_generator_config_t gen_config;
 
-mcpwm_new_timer(&timer_config, &timer);
-
 struct PWM_Channel{
   const int pinHigh;
   const int pinLow;
@@ -65,9 +63,9 @@ struct PWM_Channel{
 };
 
 //phase pins
-PWM_Channel channels[] = {{.pinHigh = 36, .pingLow = 4},
-                          {.pinHigh = 5, .pingLow = 12},
-                          {.pinHigh = 13, .pingLow = 32}};
+PWM_Channel channels[] = {{.pinHigh = 36, .pinLow = 4},
+                          {.pinHigh = 5, .pinLow = 12},
+                          {.pinHigh = 13, .pinLow = 32}};
 
 const int pwmFreq = 20000; 
 int outputFreq = 50;
@@ -105,7 +103,6 @@ bool seqForward[6][3] = {
 void setup() {
   Serial.begin(115200);
 
-  Adafruit_SSD1306 display(SCREEN_WIDTH,SCREEN_HEIGHT, OLED_RESET);
   Wire.begin();
   display.begin(SSD1306_SWITCHCAPVCC,0x3C); 
 
@@ -113,52 +110,50 @@ void setup() {
   pinMode(REVERSE_BUTTON, INPUT);
   pinMode(STOP_BUTTON, INPUT);
 
-
-
-for(int i = 0; i < sizeof(channels); i++){
-  pinMode(channels[i].pinHigh, OUTPUT);
-  pinMode(channels[i].pinLow, OUTOUT);
-  //creating operator
-  mcpwm_new_operator(&operator_config,&channels[i].op);
-  mcpwm_operator_connect_timer(channels[i].op,timer);
-  //creating comparator
-  mcpwm_new_comparator(operators,&comparator_config,&channels[i].comp);
-  mcpwm_comparator_set_compare_value(channels[i].comp,outputFreq/2);
-  //creating generators
-  gen_config.gen_gpio_num = channel[i].pinHigh;
-  mcpwm_new_generator(channels[i], &gen_config, &channels[i].high);
-  gen_config.gen_gpio_num = channels[i].lowPin;
-  mcpwm_new_generator(channels[i], &gen_config, &channels[i].low);
-  //pwm behavio
-  mcpwm_generator_set_action_on_timer_event(
-    channel[i].high,
-    MCPWM_GEN_TIMER_EVENT_ACTION(
-        MCPWM_TIMER_DIRECTION_UP,
-        MCPWM_TIMER_EVENT_EMPTY,
-        MCPWM_GEN_ACTION_HIGH
-    )
-  );  
-  mcpwm_generator_set_action_on_compare_event(
-    channels[i].high,
-    MCPWM_GEN_COMPARE_EVENT_ACTION(
-        MCPWM_TIMER_DIRECTION_UP,
-        cmpA,
-        MCPWM_GEN_ACTION_LOW
-    )
+  mcpwm_new_timer(&timer_config, &timer);
+  for(int i = 0; i < sizeof(channels)/sizeof(channels[0]); i++){
+    pinMode(channels[i].pinHigh, OUTPUT);
+    pinMode(channels[i].pinLow, OUTOUT);
+    //creating operator
+    mcpwm_new_operator(&operator_config,&channels[i].op);
+    mcpwm_operator_connect_timer(channels[i].op,timer);
+    //creating comparator
+    mcpwm_new_comparator(channels[i].op,&comparator_config,&channels[i].comp);
+    mcpwm_comparator_set_compare_value(channels[i].comp,25);
+    //creating generators
+    gen_config.gen_gpio_num = channels[i].pinHigh;
+    mcpwm_new_generator(channels[i].op, &gen_config, &channels[i].high);
+    gen_config.gen_gpio_num = channels[i].pinLow;
+    mcpwm_new_generator(channels[i], &gen_config, &channels[i].low);
+    //pwm behavio
+    mcpwm_generator_set_action_on_timer_event(
+      channel[i].high,
+      MCPWM_GEN_TIMER_EVENT_ACTION(
+          MCPWM_TIMER_DIRECTION_UP,
+          MCPWM_TIMER_EVENT_EMPTY,
+          MCPWM_GEN_ACTION_HIGH
+      )
+    );  
+    mcpwm_generator_set_action_on_compare_event(
+      channels[i].high,
+      MCPWM_GEN_COMPARE_EVENT_ACTION(
+          MCPWM_TIMER_DIRECTION_UP,
+          channels[i].comp,
+          MCPWM_GEN_ACTION_LOW
+      )
+    );
     //dead time configuration
-  mcpwm_dead_time_config_t dt_config = {
-    .posedge_delay_ticks = 2,
-    .negedge_delay_ticks = 2,
-    .flags.invert_output = true
-  };
+    mcpwm_dead_time_config_t dt_config = {
+      .posedge_delay_ticks = 2,
+      .negedge_delay_ticks = 2,
+      .flags.invert_output = true
+    };
+    mcpwm_generator_set_dead_time(channels[i].high, channels[i].low, &dt_config);
+  }
 
-  mcpwm_generator_set_dead_time(channels[i].high, channels[i].low, &dt_config);
-  );
-
-}
-  
-
-
+  //starting timer
+  mcpwm_timer_enable(timer);
+  mcpwm_timer_start_stop(timer, MCPWM_TIMER_START_NO_STOP);
 }
 void loop() {
   float battVoltage = readBatteryVoltage();
@@ -224,4 +219,24 @@ float readBatteryVoltage(){
   delay(2);
   float adcVal = sum / 10.0;
   return (adcVal*3.3/4095) * battDividerRatio;
+}
+
+void updateSPWM(){
+  //generating sine waves 120 degrees shifts
+  float A = sin(theta);
+  float B = sin(theta - 2.0 * PI / 3.0);
+  float C = sin(theta + 2.0 * PI / 3.0);
+  //converting angles to duty cycles
+  int dutyA = (A + 1.0) * 25.0;
+  int dutyB = (B + 1.0) * 25.0;
+  int dutyC = (C + 1.0) * 25.0;
+  //updating comparators
+  mcpwm_comparator_set_compare_value(channels[0].comp, dutyA);
+  mcpwm_comparator_set_compare_value(channels[1].comp, dutyB);
+  mcpwm_comparator_set_compare_value(channels[2].comp, dutyC);
+  //repeating sine waves by updating theta @outputFreq
+  theta += 2.0 * PI * outputFreq / 20000.0;
+  if (theta >= 2.0 * PI) {
+      theta -= 2.0 * PI;
+  }
 }
