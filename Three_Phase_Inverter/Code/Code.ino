@@ -92,78 +92,45 @@ void setup() {
   Wire.begin();
   display.begin(SSD1306_SWITCHCAPVCC,0x3C); 
 
-  pinMode(A_H, OUTPUT);
-  pinMode(B_H, OUTPUT);
-  pinMode(C_H, OUTPUT);
-  pinMode(A_L, OUTPUT);
-  pinMode(B_L, OUTPUT);
-  pinMode(C_L, OUTPUT);
-
   pinMode(FORWARD_BUTTON, INPUT);
   pinMode(REVERSE_BUTTON, INPUT);
   pinMode(STOP_BUTTON, INPUT);
 
-
-  // MCPWM Operator: The key module that is responsible
+// MCPWM Operator: The key module that is responsible
 //  for generating the PWM waveforms. It consists of other 
 //  submodules, like comparator, PWM generator, dead time, 
 //  and carrier modulator.
 mcpwm_operator_config_t operator_config = {
   .group_id = 0
 };
-mcpwm_new_operator(&operator_config,&PWM_Ch1.op);
-mcpwm_new_operator(&operator_config,&PWM_Ch2.op);
-mcpwm_new_operator(&operator_config,&PWM_Ch3.op);
 
-mcpwm_operator_connect_timer(PWM_Ch1.op,timer);
-mcpwm_operator_connect_timer(PWM_Ch2.op,timer);
-mcpwm_operator_connect_timer(PWM_Ch3.op,timer);
 //MCPWM Comparator: The compare module takes the time-base 
 // count value as input, and continuously compares it to the 
 // threshold value configured. When the timer is equal to any 
 // of the threshold values, a compare event will be generated 
 // and the MCPWM generator can update its level accordingly.
-
 mcpwm_comparator_config_t comparator_config= {
   .flags.update_cmp_on_tez = true,
 };
 
-mcpwm_new_comparator(operators,&comparator_config,&PWM_Ch1.comp);
-mcpwm_new_comparator(operators,&comparator_config,&PWM_Ch1.comp);
-mcpwm_new_comparator(operators,&comparator_config,&PWM_Ch1.comp);
-
-mcpwm_comparator_set_compare_value(PWM_Ch1.comp,25);
-mcpwm_comparator_set_compare_value(PWM_Ch2.comp,25);
-mcpwm_comparator_set_compare_value(PWM_Ch3.comp,25);
-
 //MCPWM Generator: One MCPWM generator can generate a pair of PWM waves,
 //  complementarily or independently, based on various events triggered 
 //  by other submodules like MCPWM Timer and MCPWM Comparator.
+mcpwm_generator_config_t gen_config;
 
-    mcpwm_generator_config_t gen_config;
-
-    gen_config.gen_gpio_num = A_H;
-    mcpwm_new_generator(PWM_Ch1, &gen_config, &PWM_Ch1.high);
-
-    gen_config.gen_gpio_num = A_L;
-    mcpwm_new_generator(PWM_Ch1, &gen_config, &PWM_Ch1.low);
-
-
-    gen_config.gen_gpio_num = B_H;
-    mcpwm_new_generator(PWM_Ch2, &gen_config, &PWM_Ch2.high);
-
-    gen_config.gen_gpio_num = B_L;
-    mcpwm_new_generator(PWM_Ch2, &gen_config, &PWM_Ch2.low);
-
-
-    gen_config.gen_gpio_num = C_H;
-    mcpwm_new_generator(PWM_Ch3, &gen_config, &PWM_Ch3.high);
-
-    gen_config.gen_gpio_num = C_L;
-    mcpwm_new_generator(PWM_Ch3, &gen_config, &PWM_Ch3.low);
+for(int i = 0; i < sizeof(channels); i++){
+  pinMode(channels[i].pinHigh, OUTPUT);
+  pinMode(channels[i].pinLow, OUTOUT);
+  mcpwm_new_operator(&operator_config,&channels[i].op);
+  mcpwm_operator_connect_timer(channels[i].op,timer);
+  mcpwm_new_comparator(operators,&comparator_config,&channels[i].comp);
+  mcpwm_comparator_set_compare_value(channels[i].comp,outputFreq/2);
+  gen_config.gen_gpio_num = channel[i].pinHugh;
+  mcpwm_new_generator(channels[i], &gen_config, &channels[i].pinHigh);
+  gen_config.gen_gpio_num = channels[i].lowPin;
+  mcpwm_new_generator(channels[i], &gen_config, &channels[i].pinLow);
 
 }
-
 
 void loop() {
   float battVoltage = readBatteryVoltage();
