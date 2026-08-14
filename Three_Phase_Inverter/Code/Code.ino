@@ -28,8 +28,9 @@ mcpwm_timer_config_t timer_config = {
     .group_id = 0,
     .clk_src = MCPWM_TIMER_CLK_SRC_DEFAULT, //PLL clock 160Hz
     .resolution_hz = 1000000,
-    .period_ticks = 50,
-    .count_mode = MCPWM_TIMER_COUNT_MODE_UP
+    .count_mode = MCPWM_TIMER_COUNT_MODE_UP,
+    .period_ticks = 50
+    
 };
 
 // MCPWM Operator: The key module that is responsible
@@ -45,9 +46,7 @@ mcpwm_operator_config_t operator_config = {
 // threshold value configured. When the timer is equal to any 
 // of the threshold values, a compare event will be generated 
 // and the MCPWM generator can update its level accordingly.
-mcpwm_comparator_config_t comparator_config= {
-  .flags.update_cmp_on_tez = true,
-};
+mcpwm_comparator_config_t comparator_config = {};
 
 //MCPWM Generator: One MCPWM generator can generate a pair of PWM waves,
 //  complementarily or independently, based on various events triggered 
@@ -111,9 +110,10 @@ void setup() {
   pinMode(STOP_BUTTON, INPUT);
 
   mcpwm_new_timer(&timer_config, &timer);
+  comparator_config.flags.update_cmp_on_tez = true;
   for(int i = 0; i < sizeof(channels)/sizeof(channels[0]); i++){
     pinMode(channels[i].pinHigh, OUTPUT);
-    pinMode(channels[i].pinLow, OUTOUT);
+    pinMode(channels[i].pinLow, OUTPUT);
     //creating operator
     mcpwm_new_operator(&operator_config,&channels[i].op);
     mcpwm_operator_connect_timer(channels[i].op,timer);
@@ -124,10 +124,10 @@ void setup() {
     gen_config.gen_gpio_num = channels[i].pinHigh;
     mcpwm_new_generator(channels[i].op, &gen_config, &channels[i].high);
     gen_config.gen_gpio_num = channels[i].pinLow;
-    mcpwm_new_generator(channels[i], &gen_config, &channels[i].low);
+    mcpwm_new_generator(channels[i].op, &gen_config, &channels[i].low);
     //pwm behavio
     mcpwm_generator_set_action_on_timer_event(
-      channel[i].high,
+      channels[i].high,
       MCPWM_GEN_TIMER_EVENT_ACTION(
           MCPWM_TIMER_DIRECTION_UP,
           MCPWM_TIMER_EVENT_EMPTY,
@@ -143,11 +143,10 @@ void setup() {
       )
     );
     //dead time configuration
-    mcpwm_dead_time_config_t dt_config = {
-      .posedge_delay_ticks = 2,
-      .negedge_delay_ticks = 2,
-      .flags.invert_output = true
-    };
+    mcpwm_dead_time_config_t dt_config = {};
+    dt_config.posedge_delay_ticks = 2;
+    dt_config.negedge_delay_ticks = 2;
+    dt_config.flags.invert_output = true;
     mcpwm_generator_set_dead_time(channels[i].high, channels[i].low, &dt_config);
   }
 
