@@ -62,7 +62,7 @@ struct PWM_Channel{
 };
 
 //phase pins
-PWM_Channel channels[] = {{.pinHigh = 36, .pinLow = 4},
+PWM_Channel channels[] = {{.pinHigh = 33, .pinLow = 4},
                           {.pinHigh = 5, .pinLow = 12},
                           {.pinHigh = 13, .pinLow = 32}};
 
@@ -90,15 +90,6 @@ unsigned long lastDebounceStop = 0;
 
 int battDividerRatio = 9.18;
 
-
-bool seqForward[6][3] = {
-  {1,0,0},  // Step 1
-  {1,1,0},  // Step 2
-  {0,1,0},  // Step 3
-  {0,1,1},  // Step 4
-  {0,0,1},  // Step 5
-  {1,0,1}   // Step 6
-};
 void setup() {
   Serial.begin(115200);
 
@@ -108,19 +99,63 @@ void setup() {
   pinMode(FORWARD_BUTTON, INPUT);
   pinMode(REVERSE_BUTTON, INPUT);
   pinMode(STOP_BUTTON, INPUT);
+  MCPWMSetup();
+}
 
+void loop() {
+  float battVoltage = readBatteryVoltage();
+  if(battVoltage < 10.0){
+    InverterOn = false;
+  }
+  oledRun(battVoltage,ReverseMode);
+  buttonCommands();
+  if(InverterOn){
+    updateSPWM();
+  }
+  
+}
+
+void buttonCommands(){
+  //Forward button pressed + dbounce checking
+  bool forwardPress = digitalRead(FORWARD_BUTTON);
+  if(forwardPress != LastStateFwrd && (millis()-lastDebounceForward > 50)){
+      InverterOn = true;
+      ReverseMode = false;
+      lastDebounceForward = millis();
+  }
+  LastStateFwrd = forwardPress;
+
+  //Reverse button pressed + debounce checking
+  bool reversePress = digitalRead(REVERSE_BUTTON);
+  if(reversePress != LastStateRvrs && (millis()-lastDebounceReverse > 50)){
+    InverterOn = true;
+    ReverseMode = true;
+    lastDebounceReverse = millis();
+  }
+  LastStateRvrs = reversePress;
+
+  //Stop button pressed + debounce checking
+  bool stopPress = digitalRead(STOP_BUTTON);
+  if(stopPress != LastStateStp && (millis()-lastDebounceStop) > 50){
+    InverterOn = false;
+    lastDebounceStop = millis();
+  }
+  LastStateStp = stopPress;
+}
+
+void MCPWMSetup(){
   mcpwm_new_timer(&timer_config, &timer);
   comparator_config.flags.update_cmp_on_tez = true;
   for(int i = 0; i < sizeof(channels)/sizeof(channels[0]); i++){
     pinMode(channels[i].pinHigh, OUTPUT);
     pinMode(channels[i].pinLow, OUTPUT);
-    //creating operator
+    //creating operator: Takes the timer and manages pwm generation by controlling generators
     mcpwm_new_operator(&operator_config,&channels[i].op);
     mcpwm_operator_connect_timer(channels[i].op,timer);
-    //creating comparator
+    //creating comparator: Sets the duty cycle by determining when output changes
     mcpwm_new_comparator(channels[i].op,&comparator_config,&channels[i].comp);
     mcpwm_comparator_set_compare_value(channels[i].comp,25);
-    //creating generators
+    //creating generators: Generates the output
     gen_config.gen_gpio_num = channels[i].pinHigh;
     mcpwm_new_generator(channels[i].op, &gen_config, &channels[i].high);
     gen_config.gen_gpio_num = channels[i].pinLow;
@@ -154,43 +189,6 @@ void setup() {
   mcpwm_timer_enable(timer);
   mcpwm_timer_start_stop(timer, MCPWM_TIMER_START_NO_STOP);
 }
-void loop() {
-  float battVoltage = readBatteryVoltage();
-  if(battVoltage < 10.0){
-    InverterOn = false;
-  }
-  oledRun(battVoltage,ReverseMode);
-
-  // phases();
-  
-
-  //Forward nutton pressed + dbounce checking
-  bool forwardPress = digitalRead(FORWARD_BUTTON);
-  if(forwardPress != LastStateFwrd && (millis()-lastDebounceForward > 50)){
-      InverterOn = true;
-      ReverseMode = false;
-      lastDebounceForward = millis();
-  }
-  LastStateFwrd = forwardPress;
-
-  //Reverse button pressed + debounce checking
-  bool reversePress = digitalRead(REVERSE_BUTTON);
-  if(reversePress != LastStateRvrs && (millis()-lastDebounceReverse > 50)){
-    InverterOn = true;
-    ReverseMode = true;
-    lastDebounceReverse = millis();
-  }
-  LastStateRvrs = reversePress;
-
-  //Stop button pressed + debounce checking
-  bool stopPress = digitalRead(STOP_BUTTON);
-  if(stopPress != LastStateStp && (millis()-lastDebounceForward) > 50){
-    InverterOn = false;
-    lastDebounceStop = millis();
-  }
-  LastStateStp = millis();
-
-}
 
 void oledRun(float val, bool dir){
   display.clearDisplay();
@@ -210,6 +208,7 @@ void oledRun(float val, bool dir){
   }
   display.display();
 }
+
 float readBatteryVoltage(){
   int sum = 0;
   for(int i = 0; i < 10; i++){
@@ -220,6 +219,7 @@ float readBatteryVoltage(){
   return (adcVal*3.3/4095) * battDividerRatio;
 }
 
+//control logic
 void updateSPWM(){
   //generating sine waves 120 degrees shifts
   float A = sin(theta);
