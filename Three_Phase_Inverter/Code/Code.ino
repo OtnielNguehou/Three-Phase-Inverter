@@ -74,7 +74,7 @@ float theta = 0;
 
 //Battery sensing
 const int batt = 35;
-const float battRatio = 9.18;
+int battDividerRatio = 9.18;
 
 //States
 volatile bool InverterOn = false;
@@ -88,7 +88,6 @@ unsigned long lastDebounceForward = 0;
 unsigned long lastDebounceReverse = 0;
 unsigned long lastDebounceStop = 0;
 
-int battDividerRatio = 9.18;
 
 void setup() {
   Serial.begin(115200);
@@ -116,8 +115,10 @@ void loop() {
 }
 
 void buttonCommands(){
+    bool reversePress = digitalRead(REVERSE_BUTTON);
+    bool forwardPress = digitalRead(FORWARD_BUTTON);
+    bool stopPress = digitalRead(STOP_BUTTON);
   //Forward button pressed + dbounce checking
-  bool forwardPress = digitalRead(FORWARD_BUTTON);
   if(forwardPress != LastStateFwrd && (millis()-lastDebounceForward > 50)){
       InverterOn = true;
       ReverseMode = false;
@@ -126,8 +127,7 @@ void buttonCommands(){
   LastStateFwrd = forwardPress;
 
   //Reverse button pressed + debounce checking
-  bool reversePress = digitalRead(REVERSE_BUTTON);
-  if(reversePress != LastStateRvrs && (millis()-lastDebounceReverse > 50)){
+  else if(reversePress != LastStateRvrs && (millis()-lastDebounceReverse > 50)){
     InverterOn = true;
     ReverseMode = true;
     lastDebounceReverse = millis();
@@ -135,8 +135,7 @@ void buttonCommands(){
   LastStateRvrs = reversePress;
 
   //Stop button pressed + debounce checking
-  bool stopPress = digitalRead(STOP_BUTTON);
-  if(stopPress != LastStateStp && (millis()-lastDebounceStop) > 50){
+  else if(stopPress != LastStateStp && (millis()-lastDebounceStop) > 50){
     InverterOn = false;
     lastDebounceStop = millis();
   }
@@ -201,10 +200,10 @@ void oledRun(float val, bool dir){
   display.print("Battery Level: ");
   display.println(val);
   if(dir){
-    display.print("Reverse");
+    display.print("Mode: Reverse");
   }
   else{
-    display.print("Forward");
+    display.print("Mode: Forward");
   }
   display.display();
 }
